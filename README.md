@@ -1,8 +1,7 @@
-###  DATE: 
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: NAVEEN KUMAR M
+###  ROLL NO : 212222110028
+###  DEPARTMENT: CSE(IOT)
 
 
 
@@ -87,13 +86,40 @@ The main features of LPC2148 include the following.
 
 ## STM 32 CUBE PROGRAM :
 
+```
+#include "main.h"
 
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+  
+  HAL_Init();
+
+  SystemClock_Config();
+
+  
+  MX_GPIO_Init();
+  
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(1000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(1000);
+  }
+}
+
+
+
+```
 
 
 
 ## OUTPUT  :
  
- 
+ ![iot exp1](https://github.com/amrutha23ashok/EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/120772913/b552aaa5-67dd-4fd7-b66b-bf13135fcae9)
  
  
 ## Result :
